@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GerriGroup OÜ - Liinihooldus Lõuna-Eestis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PÄIS JA NAVIGATSIOON -->
+    <header>
+        <div class="logo-konteiner">
+            <img src="logo.png" alt="GerriGroup OÜ logo" class="veebi-logo">
+        </div>
+        <nav>
+            <a href="#meist">Meist</a>
+            <a href="#miks-meie">Miks meiega?</a>
+            <a href="#teenused">Teenused</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- TUTVUSTUS (HERO SECTION) ILUSA TAUSTAPILDIGA -->
+    <section class="hero">
+        <div class="hero-sisu">
+            <h1>Professionaalne liinihooldus ja maaparandus</h1>
+            <p>Teostame elektriliinide alust võsa- ja puuderaiet, valmistame ette metsateid ning teeme suuremahulisi niitmis- ja freesimistöid <strong>peamiselt Lõuna-Eestis</strong>.</p>
+            <a href="#kontakt" class="btn">Küsi hinnapakkumist</a>
+        </div>
+    </section>
+
+    <!-- MEIST SEKKTSIOON -->
+    <section id="meist">
+        <div class="meist-konteiner">
+            <h2>Meist</h2>
+            <p class="meist-tekst">
+                <strong>GerriGroup OÜ</strong> on usaldusväärne ja professionaalne maahooldusettevõte, mis tegutseb kindlalt Lõuna-Eesti piirkonnas. Meie eesmärk on pakkuda kvaliteetset ja ohutut teenust maastiku-, liini- ja metsaalade korrashoiul.
+            </p>
+            <p class="meist-tekst">
+                Erinevalt paljudest suurematest ettevõtetest, mis keskenduvad vaid mastaapsetele projektidele, **väärtustame meie igat klienti ja võtame hea meelega vastu ka väiksemaid töid**. Meie teenused on taskukohased, pakkumised mõistliku hinnaga ning kohaliku ettevõttena tunneme Lõuna-Eesti maastikku ja olusid unepealt. 
+            </p>
+            <p class="meist-esiletost">
+                ⏱️ <strong>Lubadus kliendile:</strong> Esitatud hinnapäringutele ja pakkumistele vastame alati kiiresti – hiljemalt <strong>3 tööpäeva jooksul</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- UUS SEKKTSIOON: MIKS VALIDA MEID -->
+    <section id="miks-meie">
+        <h2>Miks valida just GerriGroup OÜ?</h2>
+        <div class="miks-grid">
+            <div class="miks-element">
+                <span class="miks-ikoon">🚜</span>
+                <h3>Paindlikkus ja maht</h3>
+                <p>Meie jaoks ei ole ükski töö liiga väike. Võtame ette nii eraisikute väiksemaid hooldustöid kui ka suuremier trassipuhastusi.</p>
+            </div>
+            <div class="miks-element">
+                <span class="miks-ikoon">📍</span>
+                <h3>Kohalik ja usaldusväärne</h3>
+                <p>Asume ja tegutseme Lõuna-Eestis. Oleme alati lähedal, tunneme kohalikke olusid ning meiega on lihtne suhelda.</p>
+            </div>
+            <div class="miks-element">
+                <span class="miks-ikoon">💼</span>
+                <h3>Mõistlik hinnastamine</h3>
+                <p>Pakume kvaliteetset teenust ilma liigsete lisakuludeta. Meie hinnapakkumised on läbipaistvad ja turu parimate hulgast.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEENUSED -->
+    <section id="teenused">
+        <h2>Meie teenused</h2>
+        <div class="teenus-grid">
+            <div class="teenus-kaart">
+                <h3>Liinihooldus</h3>
+                <p>Elektriliinide ja trasside puhastus, et võsa ja puud ei kasvaks üle pea.</p>
+            </div>
+            <div class="teenus-kaart">
+                <h3>Metsateede ettevalmistus</h3>
+                <p>Sihtide ja metsateede rajamise eelne puhastus ning hooldustööd.</p>
+            </div>
+            <div class="teenus-kaart">
+                <h3>Niitmine ja freesimine</h3>
+                <p>Suuremahulised hooldustööd ja võsa freesimine spetsiaaltehnikaga Lõuna-Eestis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT JA HINNAPAKKUMINE -->
+    <section id="kontakt">
+        <h2>Võta ühendust ja küsi pakkumist</h2>
+        <div class="kontakt-konteiner">
+            
+            <!-- ETTEVÕTTE AMETLIKUD ANDMED -->
+            <div class="kontakti-info">
+                <h3>GerriGroup OÜ</h3>
+                <p><strong>Registrikood:</strong> 12345678</p> <!-- ASENDA SEE REAALSIETE NUMBRITEGA -->
+                <p><strong>Tegevuspiirkond:</strong> Lõuna-Eesti</p>
+                <br>
+                <p><strong>Ettevõtte juht:</strong> Gerri Raudsepp</p>
+                <p><strong>Telefon:</strong> <a href="tel:+37256903455">+372 5690 3455</a></p>
+                <p><strong>E-mail:</strong> info@gerrigroup.ee</p> <!-- ASENDA OMA EMAILIGA -->
+            </div>
+            
+            <!-- Kontaktivorm -->
+            <form class="pakkumise-vorm" action="https://formspree.io" method="POST">
+                <input type="text" name="Nimi" placeholder="Sinu nimi / Ettevõte" required>
+                <input type="email" name="Email" placeholder="Sinu e-mail" required>
+                <input type="tel" name="Telefon" placeholder="Sinu telefoninumber">
+                <textarea name="Sõnum" placeholder="Töö kirjeldus, maht ja asukoht Lõuna-Eestis" rows="5" required></textarea>
+                <button type="submit" class="btn">Saada päring</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <!-- AMETLIK JALUS -->
+    <footer>
+        <p>&copy; 2026 GerriGroup OÜ. Kõik õigused kaitstud. | <a href="#kontakt" style="color: #888; text-decoration: none;">Privaatsustingimused</a></p>
+    </footer>
+
+</body>
+</html>

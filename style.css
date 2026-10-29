@@ -1,0 +1,329 @@
+/* ÜLDISED SEADISTUSED */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* PÄIS JA NAVIGATSIOON - MAHE JA SULANDUV ROHEKAS DISAIN */
+header {
+    /* Poolläbipaistev mahe hele-metsaroheline, mis sulandub taustapildiga kokku */
+    background-color: rgba(220, 235, 224, 0.9); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8%; 
+    position: relative; /* Päis liigub lehega koos üles ära */
+    z-index: 100;
+    border-bottom: 1px solid rgba(20, 38, 24, 0.1); /* Väga õrn eraldusjoon */
+}
+
+/* LOGO KONTEINER */
+.logo-konteiner {
+    display: flex;
+    align-items: center;
+}
+
+.veebi-logo {
+    height: 140px; /* Logo püsib suurena ja loetavana */
+    width: auto;   
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.veebi-logo:hover {
+    transform: scale(1.03); 
+}
+
+/* NAVIGATSIOONI MENÜÜ NUPUD - NÜÜD TUMEROHELISED */
+nav {
+    display: flex;
+    gap: 25px; 
+}
+
+nav a {
+    color: #142618 !important; /* SUNNIB nupud tumeroheliseks, et nad paistaksid heledal taustal välja */
+    text-decoration: none;
+    font-size: 18px; 
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Kui hiirega menüü nuppudele peale liikuda */
+nav a:hover {
+    color: #ffffff !important; /* Hiirega peale minnes muutub tekst valgeks */
+    background-color: #142618; /* Taust muutub tumeroheliseks */
+}
+
+
+
+/* TUTVUSTUS (HERO SECTION) ILUSA TAASTAPILDIGA */
+.hero {
+    position: relative;
+    height: 65vh;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    /* ASENDA SEDA RIDA SIIN: */
+    background: url('taust.jpg') no-repeat center center/cover;
+}
+
+
+/* Rohekas-tume loor pildi peal, et valge tekst oleks loetav */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 38, 24, 0.65);
+    z-index: 1;
+}
+
+.hero-sisu {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* NUPUD */
+.btn {
+    display: inline-block;
+    background-color: #ff9f1c;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #e08600;
+    transform: translateY(-2px);
+}
+
+/* TEENUSED */
+#teenused, #kontakt {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #1b3322;
+}
+
+.teenus-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.teenus-kaart {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 250px;
+    border-top: 5px solid #1b3322;
+}
+
+.teenus-kaart h3 {
+    margin-bottom: 15px;
+    color: #1b3322;
+}
+
+/* KONTAKT JA VORM */
+#kontakt {
+    background-color: #f0f4f1;
+}
+
+.kontakti-info {
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.kontakti-info a {
+    color: #1b3322;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pakkumise-vorm {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.pakkumise-vorm input, .pakkumise-vorm textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.pakkumise-vorm input:focus, .pakkumise-vorm textarea:focus {
+    border-color: #1b3322;
+    outline: none;
+}
+
+/* JALUS */
+footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+/* MEIST SEKKTSIOONI KUJUNDUS */
+#meist {
+    padding: 80px 10%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.meist-konteiner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.meist-tekst {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.8;
+}
+
+.meist-esiletost {
+    font-size: 18px;
+    background-color: #f0f4f1;
+    padding: 15px 25px;
+    border-left: 5px solid #ff9f1c; /* Oranž triip lubaduse kõrval */
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 20px;
+    color: #1b3322;
+}
+/* MIKS VALIDA MEID - PROFFESIONAALNE KUJUNDUS */
+#miks-meie {
+    padding: 80px 10%;
+    background-color: #f0f4f1; /* Mahe hallikas-roheline taust, mis vaheldub meist sektsiooniga */
+    text-align: center;
+}
+
+.miks-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.miks-element {
+    flex: 1;
+    min-width: 250px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border-bottom: 4px solid #ff9f1c; /* Oranž triip all servas */
+}
+
+.miks-ikoon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.miks-element h3 {
+    color: #142618;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.miks-element p {
+    color: #555;
+    font-size: 15px;
+}
+
+/* KONTAKTIALA KAASAEGNE PAIGUTUS POOLEKS (INFO VASAKUL, VORM PAREMAL) */
+.kontakt-konteiner {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.kontakti-info {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border-left: 5px solid #142618;
+}
+
+.kontakti-info h3 {
+    font-size: 24px;
+    color: #142618;
+    margin-bottom: 20px;
+}
+
+.kontakti-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.pakkumise-vorm {
+    flex: 1.5; /* Vorm on natuke laiem kui infokast */
+    min-width: 300px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
